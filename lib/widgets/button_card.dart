@@ -5,7 +5,7 @@ import '../constant/colors.dart';
 Widget buttonCard (String title, int num, VoidCallback increment, VoidCallback decrement){
   return Container(
     height: 180,
-    width: 200,
+    width: 180,
     decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(12),
         color: MyColors.secondColor

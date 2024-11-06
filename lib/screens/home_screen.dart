@@ -107,10 +107,44 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                 ),
               )),
-          Expanded(
+          Padding(
+            padding: const EdgeInsets.all(10.0),
             child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-
+                buttonCard(
+                  'WIEGHT',
+                   weight,
+                    (){
+                    setState(() {
+                      weight ++;
+                    });
+                    },
+                    (){
+                    if (weight > 0){
+                      setState(() {
+                        weight --;
+                      });
+                    }
+                    }
+                ),
+                const SizedBox( width: 6,),
+                buttonCard(
+                    'AGE',
+                    age,
+                        (){
+                      setState(() {
+                        age ++;
+                      });
+                    },
+                        (){
+                      if (age > 0){
+                        setState(() {
+                          age --;
+                        });
+                      }
+                    }
+                )
               ],
             ),
           )
