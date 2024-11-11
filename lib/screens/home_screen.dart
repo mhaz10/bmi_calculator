@@ -1,4 +1,7 @@
+import 'package:bmi_calculator/calculate.dart';
 import 'package:bmi_calculator/constant/colors.dart';
+import 'package:bmi_calculator/screens/result_screen.dart';
+import 'package:bmi_calculator/widgets/bottom_button.dart';
 import 'package:bmi_calculator/widgets/gender_button.dart';
 import 'package:flutter/material.dart';
 import '../widgets/button_card.dart';
@@ -147,7 +150,22 @@ class _HomeScreenState extends State<HomeScreen> {
                 )
               ],
             ),
-          )
+          ),
+          bottomButton(
+              'CALCULATE',
+              (){
+                Calculate calculate = Calculate(height: height, weight: weight);
+                String getCalculate = calculate.calculate();
+                String getResult = calculate.getResult();
+                String getInterpretation = calculate.getInterpretation();
+                Navigator.push(this.context, MaterialPageRoute(builder: (_) => const ResultScreen(),
+                settings: RouteSettings(arguments: {
+                  'calculate' : getCalculate,
+                  'result' : getResult,
+                  'Interpretation' : getInterpretation
+                })
+                ));
+              })
         ],
       ),
     );

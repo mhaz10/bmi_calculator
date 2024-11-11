@@ -10,4 +10,6 @@ class MyColors {
   
   static const Color textColor = Color(0xFFFFFFFF);
 
+  static const Color bottomButtonColor = Color(0xFFF10606);
+
 }
