@@ -19,11 +19,13 @@ Widget buttonCard (String title, int num, VoidCallback increment, VoidCallback d
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             FloatingActionButton(
+                heroTag: null,
                 child: Icon(Icons.add, size: 30,),
                 backgroundColor: Colors.blue,
                 shape: CircleBorder(),
                 onPressed: increment),
             FloatingActionButton(
+                heroTag: null,
                 child: Text('-', style: TextStyle(fontSize: 35),),
                 backgroundColor: Colors.blue,
                 shape: CircleBorder(),
